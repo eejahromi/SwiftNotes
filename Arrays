@@ -1,14 +1,11 @@
-// most of the 572653 ways you can declare an array
+// Just a few example of the 1272653 ways you can declare an array
+
+// All below arrays are immutable
 let numbers:Array<Int>
-
 let inferredNumbers = Array<Int>()
-
 let alsoInferredNumbers = [Int]()
-
 let evenNumbers = [2,4,6,8]
-
 let allZeros = [Int](count: 5, repeatedValue: 0)
-
 let vowels = ["A","E","I","O","U"]
 
-// All the above arrays are immutable
+
