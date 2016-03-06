@@ -1,0 +1,10 @@
+func printMultipleOfFive(multiplier: Int) {
+    print("\(multiplier) * 5 = \(multiplier * 5)")
+}
+printMultipleOfFive(6)
+
+
+func printMultipleOf(multiplier:Int,andValue:Int){
+    print("\(multiplier) * \(andValue) = \(multiplier * andValue)")
+}
+printMultipleOf(4, andValue: 8)
