@@ -1,0 +1,10 @@
+// Tuples
+let coordinates : (Int,Int) = (1,0)
+let x : Int = coordinates.0
+let y : Int = coordinates.1
+
+let grid = (x:2,y:3)
+let gridX = grid.x
+let gridY = grid.y
+
+
