@@ -7,4 +7,11 @@ let grid = (x:2,y:3)
 let gridX = grid.x
 let gridY = grid.y
 
+// another way to create a tuple
+let tuple: (day:Int,month:Int,year:Int) = (15,8,2015)
+
+// reading a tuple into another
+let temp = (month:12,day:14,year:2015,averageTemperature:52)
+var (_,day,_,averageTemerature) = temp
+
 
