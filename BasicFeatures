@@ -1,0 +1,77 @@
+/* Switch */
+let coordinates:(x:Int,y:Int,z:Int) = (3,3,3)
+switch(coordinates){
+case(let x,let y, let z) where x == y && y == z:
+    print("x = y = z") 
+default:
+    print("Something else")
+}
+// "x = y = z"
+
+let hourOfDay = 12
+let timeOfDay: String
+switch(hourOfDay){
+case 0...5:
+    timeOfDay = "Early Morning"
+case 6...11:
+    timeOfDay = "Morning"
+case 12...16:
+    timeOfDay = "Afternoon"
+case 17...19:
+    timeOfDay = "Evening"
+case 20..<24:
+    timeOfDay = "Late evening"
+default:
+    timeOfDay = "INVALID HOUR!"
+}
+
+/* Loops */
+// ranges
+let closedRange = 0...5
+let halfOpenRange = 0..<5
+
+for i in 1...count {
+    sum += i
+}
+
+// loop with no iterator
+var secondSum = 0
+for _ in 1...count {
+    secondSum += 5
+}
+
+// repeat-while
+// same as do-while
+var sum = 1
+repeat {
+    sum += 10
+} while sum < 30
+
+
+// label statements
+var newSum = 0
+
+rowLoop: for row in 0..<8{
+    columnLoop: for column in 0..<8 {
+        if row == column {
+            continue rowLoop
+        }
+        newSum += row * column
+    }
+}
+
+// skipping with statement labels
+firstLoop: for i in 0...10 {
+    secondLoop: for j in 0..<5 {
+        if i == 4 {
+            print("Skipping 4 in first loop")
+            continue secondLoop
+        }
+        print("\(i)")
+    }
+}
+
+
+
+
+
