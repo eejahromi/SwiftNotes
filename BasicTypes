@@ -1,4 +1,4 @@
-// Tuples
+/* Tuples */
 let coordinates : (Int,Int) = (1,0)
 let x : Int = coordinates.0
 let y : Int = coordinates.1
@@ -14,4 +14,11 @@ let tuple: (day:Int,month:Int,year:Int) = (15,8,2015)
 let temp = (month:12,day:14,year:2015,averageTemperature:52)
 var (_,day,_,averageTemerature) = temp
 
+/* Strings */
+let myName = "Ehsan"
+let secondWay = "Ehs\u{61}n" // "Ehsan" - using unicode character!
+
+//quick handy methods
+myName.characters.count
+myName.uppercaseString
 
