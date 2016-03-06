@@ -8,3 +8,9 @@ func printMultipleOf(multiplier:Int,andValue:Int){
     print("\(multiplier) * \(andValue) = \(multiplier * andValue)")
 }
 printMultipleOf(4, andValue: 8)
+
+// with no external name
+func printMultiplierOf(multiplier: Int, _ andValue:Int) {
+    print("\(multiplier) * \(andValue) = \(multiplier * andValue)")
+}
+printMultipleOf(4, andValue: 2)
