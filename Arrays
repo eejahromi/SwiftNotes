@@ -8,4 +8,22 @@ let evenNumbers = [2,4,6,8]
 let allZeros = [Int](count: 5, repeatedValue: 0)
 let vowels = ["A","E","I","O","U"]
 
+// mutable array
+var players = ["John","Bob","Sally","Dan"]
+
+// properties and useful methods
+contains
+first/last
+minElement()
+maxElement()
+indexOf()
+sort()
+
+// sorting
+players.sort() // returns a copy of sorted
+print(players)
+
+players.sortInPlace() // real sorting in place
+print(players)
+
 
