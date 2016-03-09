@@ -2,10 +2,35 @@
 let pairs: Dictionary<String,Int>
 
 let inferredPairs = Dictionary<String,Int>()
-let alsoInferredPairs = [String:Int]()
+let moreInferredPairs = [String:Int]()
 
-let namesAndScores = ["Anna":2,"Brian":2,"Craig":8,"Donna":6]
+let namesAndScores = ["John":2,"Sally":2,"Don":8,"Steve":6]
 
 // empty dictionary
 var emptyDictionary: [Int:Int]
 emptyDictionary = [:]
+
+// properties and methods
+namesAndScores.isEmpty
+namesAndScores.count
+
+// keys and values
+namesAndScores.keys
+print(Array(namesAndScores.keys))
+print(Array(namesAndScores.values))
+
+// modifying dictionaries
+// mutable dictionary
+var bobData = ["name":"Bob","profession":"Programmer","country":"USA"]
+
+bobData.updateValue("CA", forKey: "state")
+print(bobData)
+bobData.updateValue("AZ", forKey: "state")
+print(bobData)
+
+// or using subscripting
+bobData["city"] = "San Francisco"
+
+// removing pairs
+bobData.removeValueForKey("state")
+
