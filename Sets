@@ -23,3 +23,18 @@ myTimes.remove("8am")
 for element in myTimes {
     print(element)
 }
+
+// set operations
+let adamTimes:Set = ["9am","11am","1pm"]
+
+// union
+let unionSet = myTimes.union(adamTimes)
+
+// intersect
+let intersectSet = myTimes.intersect(adamTimes)
+
+// subtract
+let subtractSet = myTimes.subtract(adamTimes)
+
+// exclusive OR
+let exclusiveOrSet = myTimes.exclusiveOr(adamTimes)
