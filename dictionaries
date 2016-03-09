@@ -1,0 +1,11 @@
+// declaring dictionaries
+let pairs: Dictionary<String,Int>
+
+let inferredPairs = Dictionary<String,Int>()
+let alsoInferredPairs = [String:Int]()
+
+let namesAndScores = ["Anna":2,"Brian":2,"Craig":8,"Donna":6]
+
+// empty dictionary
+var emptyDictionary: [Int:Int]
+emptyDictionary = [:]
