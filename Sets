@@ -14,3 +14,12 @@ print(someSet.count)
 print(someSet.contains(1))
 print(someSet.first)
 
+// adding and removing
+var myTimes: Set = ["8am","9am","10am"]
+myTimes.insert("11am")
+myTimes.remove("8am")
+
+// iterating through a set
+for element in myTimes {
+    print(element)
+}
