@@ -34,3 +34,22 @@ bobData["city"] = "San Francisco"
 // removing pairs
 bobData.removeValueForKey("state")
 bobData["city"] = nil
+
+// iterating
+for key in namesAndScores.keys{
+    print("\(key), ",terminator:"") // no newline
+}
+
+// sequence operations
+let namesString = namesAndScores.reduce("", combine: { $0 + "\($1.0), " })
+print(namesString)
+
+print(namesAndScores.filter({ $0.1 < 5 }))
+// $1.0 accesses the key of the pair
+// $0.1 accesses the value of the pair
+
+// Note: in swift all basic types are hashable and have a hashValue property
+print("some string".hashValue)
+print(2.hashValue) // hashValue of number 2
+print(false.hashValue) // hashValue of boolean false
+
