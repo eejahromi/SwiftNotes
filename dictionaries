@@ -33,4 +33,4 @@ bobData["city"] = "San Francisco"
 
 // removing pairs
 bobData.removeValueForKey("state")
-
+bobData["city"] = nil
