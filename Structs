@@ -1,3 +1,6 @@
+// structs are value types, they are copied by value into another
+// most basic types in swift are structs! (Int,String,Array)
+
 // simple struct
 struct Location {
     let latitude: Double
