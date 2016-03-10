@@ -37,3 +37,17 @@ secondJohn === john // true
 
 let someOtherJohn = Person(firstName: "John", lastName: "Smith")
 someOtherJohn === john // false
+
+// access controls
+// public, private, internal: entities are to code inside the module defined in but not to code in a module that imports the module it is defined in
+
+internal class InternalClass{
+    private func sayHi(){
+        print("Hi")
+    }
+    
+    // internal by default
+    func speak(){
+        sayHi()
+    }
+}
