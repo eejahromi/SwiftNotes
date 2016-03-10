@@ -26,3 +26,14 @@ class Person{
         return "\(firstName) \(lastName)"
     }
 }
+
+// all stored variables must have initial values unless they are optionals
+let john = Person(firstName: "John", lastName: "Smith")
+john.fullName()
+
+// checking identity of the object
+let secondJohn = john
+secondJohn === john // true
+
+let someOtherJohn = Person(firstName: "John", lastName: "Smith")
+someOtherJohn === john // false
