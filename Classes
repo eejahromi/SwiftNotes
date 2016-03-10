@@ -1,0 +1,15 @@
+// structs vs classes
+
+
+    structues
+    implicit copying of values
+    data is immutable
+    useful for representing values
+    declared on stack
+
+    Classes
+    implicit sharing of objects
+    data is mutable
+    useful for representing "things"
+    declared on heap
+
