@@ -31,6 +31,26 @@ newLocation.longitude
 // !unless we mark a variable property as an optional
 // constant optionals must also be initialized
 
+// Extensions 
+// can be added to the types we create
+extension SecondLocation {
+    func isNorthernHemisphere() -> Bool {
+        return latitude > 0.0
+    }
+}
+
+let location = SecondLocation(coordinateString: "44.9850,-93.2750")
+location.isNorthernHemisphere()
+
+// Extension
+// or types we don't own - like categories in Objc
+extension String {
+    func evenOrOdd() -> String {
+        return characters.count % 2 == 0 ? "Even!" : "Odd!"
+    }
+}
+
+"Odd number of characters!".evenOrOdd()
 
 
 
