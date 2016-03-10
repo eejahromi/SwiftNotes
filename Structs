@@ -6,5 +6,7 @@ struct Location {
 
 let storeLocation = Location(latitude: 22.9876, longitude: -52.2345)
 
-
+// accessing memebers
+storeLocation.latitude
+storeLocation.longitude
 
