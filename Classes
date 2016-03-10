@@ -1,6 +1,5 @@
 // structs vs classes
 
-
     structues
     implicit copying of values
     data is immutable
@@ -13,3 +12,17 @@
     useful for representing "things"
     declared on heap
 
+// simple class Person
+class Person{
+    var firstName: String
+    var lastName: String
+ 
+    init(firstName: String,lastName:String){
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+    
+    func fullName() ->String {
+        return "\(firstName) \(lastName)"
+    }
+}
