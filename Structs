@@ -10,3 +10,27 @@ let storeLocation = Location(latitude: 22.9876, longitude: -52.2345)
 storeLocation.latitude
 storeLocation.longitude
 
+// struct with custom initializer
+struct SecondLocation {
+    let latitude: Double
+    let longitude: Double
+    
+    init(coordinateString: String){
+        let crdSplit = coordinateString.characters.split(",")
+        latitude = atof(String(crdSplit.first!))
+        longitude = atof(String(crdSplit.last!))
+    }
+    
+}
+
+let newLocation = SecondLocation(coordinateString:"23.2345,12.1234")
+newLocation.latitude
+newLocation.longitude
+
+// if we have an initializer in a struct we must initilize all stored properties
+// !unless we mark a variable property as an optional
+// constant optionals must also be initialized
+
+
+
+
