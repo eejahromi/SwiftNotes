@@ -1,0 +1,10 @@
+// simple struct
+struct Location {
+    let latitude: Double
+    let longitude: Double
+}
+
+let storeLocation = Location(latitude: 22.9876, longitude: -52.2345)
+
+
+
