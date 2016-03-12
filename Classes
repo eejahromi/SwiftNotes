@@ -51,3 +51,28 @@ internal class InternalClass{
         sayHi()
     }
 }
+
+////////////////////////////////////////////////////////////////////////////
+// Inheritance
+class Person{
+    var firstName: String
+    var lastName: String
+    
+    init(firstName:String,lastName:String){
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+    
+}
+
+class Student: Person {
+    var grades: [Grade] = []
+    
+    func recordGrade(grade: Grade){
+        grades.append(grade)
+    }
+}
+
+var john = Student(firstName: "John", lastName: "Smith")
+
+
