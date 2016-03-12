@@ -75,4 +75,19 @@ class Student: Person {
 
 var john = Student(firstName: "John", lastName: "Smith")
 
+class StudetAthelete: Student {
+    var failedClasses: [Grade] = []
+    
+    override func recordGrade(grade: Grade) {
+        super.recordGrade(grade)
+        
+        if grade.letter == "F" {
+            failedClasses.append(grade)
+        }
+    }
+    
+    func athleteIsEligible() -> Bool {
+        return failedClasses.count < 3
+    }
+}
 
