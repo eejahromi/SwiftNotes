@@ -53,6 +53,14 @@ internal class InternalClass{
 }
 
 ////////////////////////////////////////////////////////////////////////////
+// quick notes on inheritance
+// preventing inheritance and overriding methods
+// final class Student: Person { }
+// final func printGrades() {}
+
+// super
+// gotta call super in initializer after subclassing - normally at the end
+
 // Inheritance
 class Person{
     var firstName: String
