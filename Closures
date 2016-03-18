@@ -18,3 +18,12 @@ multiplyClosure = {
   $0 * $1
 }
 
+// closure as function parameter
+calculateNumbers(4,2,operation:{ (a:Int,b:Int) -> Int in
+  return a + b
+})
+
+// or another syntax
+calculateNumbers(4,2,operation:{
+  $0 + $1
+})
