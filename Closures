@@ -18,6 +18,11 @@ multiplyClosure = {
   $0 * $1
 }
 
+// function with closure as parameter
+func calculateNumbers(a:Int,b:Int,operation:(Int,Int) ->Int) -> Int{
+  return operation(a,b)
+}
+
 // closure as function parameter
 calculateNumbers(4,2,operation:{ (a:Int,b:Int) -> Int in
   return a + b
