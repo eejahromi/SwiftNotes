@@ -1,4 +1,4 @@
-// simple example
+// a function without a name!
 
 // declaration
 var multiplyClosure: (Int, Int) -> Int
