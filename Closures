@@ -7,3 +7,14 @@ var multiplyClosure: (Int, Int) -> Int
 multiplyClosure = { (a:Int,b:Int) -> Int in
   return a * b
 }
+
+// short syntax
+multiplyClosure = { (a,b) in
+  a * b
+}
+
+// even shorter!
+multiplyClosure = {
+  $0 * $1
+}
+
