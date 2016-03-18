@@ -24,7 +24,7 @@ func calculateNumbers(a:Int,b:Int,operation:(Int,Int) ->Int) -> Int{
 }
 
 // closure as function parameter
-calculateNumbers(4,2,operation:{ (a:Int,b:Int) -> Int in
+calculateNumbers(4,b:2,operation:{ (a:Int,b:Int) -> Int in
   return a + b
 })
 
