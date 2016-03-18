@@ -1,0 +1,9 @@
+// simple example
+
+// declaration
+var multiplyClosure: (Int, Int) -> Int
+
+// assigning closure to a variable
+multiplyClosure = { (a:Int,b:Int) -> Int in
+  return a * b
+}
