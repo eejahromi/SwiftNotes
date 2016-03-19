@@ -32,3 +32,12 @@ calculateNumbers(4,b:2,operation:{ (a:Int,b:Int) -> Int in
 calculateNumbers(4,2,operation:{
   $0 + $1
 })
+
+// capturing from the enclosed scope
+var counter = 0
+let incrementCounter = {
+  count++
+}
+
+incrementCounter()
+
