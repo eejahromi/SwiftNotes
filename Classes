@@ -60,6 +60,13 @@ internal class InternalClass{
 
 // super
 // gotta call super in initializer after subclassing - normally at the end
+init() {
+    // instance variables and constants
+    super.init()
+    // other initialization code and method calls
+}
+
+
 
 // Inheritance
 class Person{
