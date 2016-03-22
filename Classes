@@ -66,6 +66,10 @@ init() {
     // other initialization code and method calls
 }
 
+ViewController inits
+init?(coder) - for VCs automatically loaded from storyboard
+init(nibName,bundle) - for VCs using a nib
+init(style) - for VCs using code for UI
 
 
 // Inheritance
