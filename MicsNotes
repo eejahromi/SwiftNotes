@@ -1,0 +1,3 @@
+// bridged types in swift 
+// Example NSString
+let directory = documentsDirectory() as NSString // assuming func documentsDirectory returns doc dir string
