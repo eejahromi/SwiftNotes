@@ -31,7 +31,19 @@ Month.March.rawValue - Month.January.rawValue
 // initializing raw values
 let fourthMonth = Month(rawValue: 4)
 
+-Associated values
+Note: an enum can either have raw values or associated values but not both
+enum withdrawalResult {
+  case Success(Int)
+  case Error(String)
+}
 
-
-
+func withdraw(amount: Int) -> withdrawalResult {
+  if amount <= balance {
+    balance -= amount
+    return .Success(balance)
+  } else {
+    return .Error("Not enough money!")
+  }
+}
 
