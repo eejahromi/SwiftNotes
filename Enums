@@ -17,4 +17,21 @@ func cardColor(suit: Suit) -> String {
   }
 }
 
-var card = .Spades
+var card = Suit.Spades
+
+-raw values
+// default starts at zero
+enum Month:Int {
+  case January = 1, February, ...
+}
+// accessing raw values
+Month.February.rawValue // 2
+Month.March.rawValue - Month.January.rawValue
+
+// initializing raw values
+let fourthMonth = Month(rawValue: 4)
+
+
+
+
+
