@@ -1,0 +1,20 @@
+enum example
+-one added benefit of using enums is code completion
+
+enum Suit{
+  case Spades, Diamonds, Hearts, Clubs
+}
+
+// card colors
+func cardColor(suit: Suit) -> String {
+  switch suit {
+    case Suit.Spades, Suit.Clubs:
+      return "Black"
+    case Suit.Diamonds, Suit.Hearts:
+      return "Red"
+    default:
+      return "nada"
+  }
+}
+
+var card = .Spades
