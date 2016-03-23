@@ -110,3 +110,9 @@ class StudetAthelete: Student {
     }
 }
 
+// similar features to Objc
+deinit{
+    print("class being ")
+}
+
+weak var employee: Person?
