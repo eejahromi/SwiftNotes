@@ -47,3 +47,10 @@ func withdraw(amount: Int) -> withdrawalResult {
   }
 }
 
+- Optionals?
+// optionals use enums under the hood
+let homePhone: Optional<String> = .None
+let githubAccount: <String> = .Some("@eejahromi")
+
+homePhone == nil   // true
+homePhone == .None // true
