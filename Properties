@@ -5,7 +5,7 @@ struct TV{
   var height; Double
   var width: Double
   
-  // stored property 
+  // computed property 
   // should be a var 
   // should have a return value and uses curly braces to contain the code
   var diagonal: Int{
