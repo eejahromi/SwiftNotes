@@ -31,6 +31,18 @@ tv.diagonal = 70
 let height = tv.height
 let width = tv.width
 
+-Type property
+// static keyword: using it on the type itself rather than instances of that type
+
+-singleton
+class GameManager{
+  static let defaultManager = GameManager()
+  var gameScore = 0
+  var saveState = 0
+  private init(){}
+}
+// default constant type property of the instance of the class
+// private initializer to make sure init() doesn't get called from outside
 
 
 
