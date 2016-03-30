@@ -1,0 +1,12 @@
+Attributes in classes and structs that need to have memory allocated for them are called strored properties.
+If attributes are calculated on the fly with no memory allocation, they're called computed peoperties.
+
+struct TV{
+  var height; Double
+  var width: Double
+  
+  var diagonal: Int{
+    // calculate diagonal
+    return Int(diagonalDimension)
+  }
+}
