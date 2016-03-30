@@ -73,4 +73,19 @@ class Game{
   }
 }
 
+-lazy variables
+// lazy stored property, must be var
+// won't get calculated until called on for use, only calculates the first time
+class Circle{
+  lazy var pie = {
+    return calcPie
+  }
+  
+  var circumference:Double{
+    return pie * radius * radius
+  }
+}
+
+
+
 
