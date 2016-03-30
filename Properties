@@ -44,6 +44,23 @@ class GameManager{
 // default constant type property of the instance of the class
 // private initializer to make sure init() doesn't get called from outside
 
+-property observers
+// Note: willSet and didSet will only work on var and after initializations
+// type properties inside observers still need to be called in the type itself (Level.highestLevel)
+struct Level {
+  static var highestLevel = 1
+  let id: Int
+  var boss: String
+  var unlocked: Bool {
+    didSet{
+      if unlocked && id > Level.highestLevel {
+        Level.highestLevel = id
+      }
+    }
+  }
+}
+
+
 
 
 
