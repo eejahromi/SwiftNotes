@@ -60,7 +60,17 @@ struct Level {
   }
 }
 
-
-
+-Limiting variables with observers
+class Game{
+  static let maxScore = 50
+  var score = 0{
+    didSet{
+      if score > Game.maxScore{
+        print("Can't go higher")
+        score = oldScore
+      }
+    }
+  }
+}
 
 
