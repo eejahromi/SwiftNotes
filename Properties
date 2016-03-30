@@ -13,3 +13,25 @@ struct TV{
     return Int(diagonalDimension)
   }
 }
+
+-getters and setters
+// we cuold also explicitly use getters and setters 
+var diagonal: Int{
+  get{
+    return Int(calculatedDiagonalDimension)
+  }
+  
+  set{
+    width = ...
+    height = ...
+  }
+}
+
+tv.diagonal = 70
+let height = tv.height
+let width = tv.width
+
+
+
+
+
