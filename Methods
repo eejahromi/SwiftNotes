@@ -1,0 +1,3 @@
+-deciding between methods vs computed properties
+// if we need a setter, it's better to use a computed property
+// if no setter or we need to hit a DB or do heavy computation then it's better to do methods
