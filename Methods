@@ -22,3 +22,10 @@ class Car{
     self.color = color
   }
 }
+
+-Type methods (static methods)
+structs Utils {
+  static func factorial(number: Int) -> Int { // alows for class level call
+    return (1...number).reduce(1,combine: *)
+  }
+}
