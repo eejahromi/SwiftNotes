@@ -14,3 +14,11 @@ enum Month:Int{
 -mutating methods
 Since structs are value typed as apposed to classes, mutating methods are used to change a struct's value
 
+-private setter
+class Car{
+  private(set) var color: String // color cannot be altered from outside the class
+  
+  func paint(color: String){
+    self.color = color
+  }
+}
