@@ -17,3 +17,11 @@ protocol Vehicle{
     var weight: Int { get }
     var name: String { get set }
 }
+
+// we can have protocols that inherit from each other like classes
+protocol WheeledVehicle: Vehicle {
+ var numberOfWheels: Int { get }
+ var wheelSize: Double { get set }
+}
+
+let motorCycle: WheeledVehicle // is-a wheeledVehicle , is-a Vehicle
