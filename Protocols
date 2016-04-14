@@ -42,6 +42,25 @@ class HeavyObjects: WeightCalculatable {
     }
 }
 
+// extensions and protocols
+class Bike {}
+
+extension Bike: Wheeled {
+    var numberOfWheels: Int {
+        return 2
+    }
+}
+// if you want to remove a protocol, you can just delete the specific extension (makes code cleaner and organized)
+extension Bike: Vehicle {
+    func accelerate() {
+        // body
+    }
+    
+    func stop() {
+        // body
+    }
+}
+
 
 
 
