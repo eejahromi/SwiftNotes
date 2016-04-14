@@ -31,7 +31,7 @@ let motorCycle: WheeledVehicle // is-a wheeledVehicle , is-a Vehicle
 protocol WeightCalculatable {
     typealias weightType
     
-    func calculateWeight() -> weightType
+    func calculateWeight() -> WeightType
 }
 
 class HeavyObjects: WeightCalculatable {
