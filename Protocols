@@ -25,3 +25,23 @@ protocol WheeledVehicle: Vehicle {
 }
 
 let motorCycle: WheeledVehicle // is-a wheeledVehicle , is-a Vehicle
+
+// typealias in protocols
+// using typealias we are declraing that there is a typealias and we are deffering to the adopter class to pick the exact type of variable
+protocol WeightCalculatable {
+    typealias weightType
+    
+    func calculateWeight() -> weightType
+}
+
+class HeavyObjects: WeightCalculatable {
+    typealias weightType = Int
+    
+    func calculateWeight() -> Int {
+        return 100
+    }
+}
+
+
+
+
