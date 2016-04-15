@@ -61,6 +61,37 @@ extension Bike: Vehicle {
     }
 }
 
+// simple protocol implementation in class hierarchy
+class Person { // first and last name }
+class Student: Person { // grades and student ID }
+class StudentAthlete: Student { // Eligible, sports }
+
+// suppose we want to have a collection called roster but that roster also includes coaches
+// we can do a class hierarchy like this
+class Teacher: Person {  }
+class Coach: Teacher { // role = "Coach" }
+// but we can only add Coach with the first and last name to the roster collection because that's all StudentAthlete and Coachs have in common
+
+// better solution is to use a protocol TeamMember to factor out the most common parts
+protocol TeamMember { 
+    var role: String { get }
+    var firstName: String { get }
+    func play()
+}
+
+// now we do
+class Coach: Teacher, TeamMember { // role, play }
+class StudentAthelete: Student, TeamMember { // role, play }
+// now we can have a complete roster collection
+
+
+
+
+
+
+
+
+
 
 
 
