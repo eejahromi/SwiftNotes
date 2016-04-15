@@ -61,7 +61,7 @@ extension Bike: Vehicle {
     }
 }
 
-// simple protocol implementation in class hierarchy
+- simple protocol implementation in class hierarchy
 class Person { // first and last name }
 class Student: Person { // grades and student ID }
 class StudentAthlete: Student { // Eligible, sports }
@@ -84,12 +84,26 @@ class Coach: Teacher, TeamMember { // role, play }
 class StudentAthelete: Student, TeamMember { // role, play }
 // now we can have a complete roster collection
 
+-Protocols in Standard Library
+simple comparisons in Swift like 
+a == b // Int
+someString == someOtherString // String
+use Equatable protocol because primitives in Swift are all structs
 
+// if we have a struct Record we can also conform to the Equatable protocol and override the == func to use it as normal
+func ==(lhs: Self, rhs: Self) -> Bool {}
+struct Record {
+    var wins: Int
+    var losses: Int
+}
 
+extension: Equatable {}
+func ==(lhs: Record, rhs: Record) -> Bool {
+    return lhs.wins == rhs.wins && lhs.losses == rhs.losses
+}
 
-
-
-
+// other functions like < and <= are available in the Comparable protocol which inherits from Equatable
+NOTE: if we override == and < the other functions like != and > will be generated for free!
 
 
 
