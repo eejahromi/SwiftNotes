@@ -1,4 +1,4 @@
-// Just a few example of the 1272653 ways you can declare an array
+// Just a few examples of the 1272653 ways you can declare an array
 
 // All below arrays are immutable
 let numbers:Array<Int>
