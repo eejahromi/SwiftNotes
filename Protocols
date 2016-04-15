@@ -105,7 +105,32 @@ func ==(lhs: Record, rhs: Record) -> Bool {
 // other functions like < and <= are available in the Comparable protocol which inherits from Equatable
 NOTE: if we override == and < the other functions like != and > will be generated for free!
 
+-boolValue with if-statements
+protocol BooleanType {
+  var boolValue: Bool { get }
+}
 
+extension Record: BooleanType {
+    var booleanValue: Bool {
+        return wins > losses
+    }
+}
 
+if Record(wins:10,losses:5) {
+    print("winning!")
+} else {
+    print("losses")
+}
 
+-CustomStringConvertible
+// overriding the string for printing objects
+protocol CustomStringConvertible {
+  var description: String { get }
+}
 
+extension Record: CustomStringConvertible {
+    var description: String {
+        return "\(wins) - \(losses)"
+    }
+}
+print(record) // 73 - 9
