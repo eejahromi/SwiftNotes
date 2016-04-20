@@ -1,0 +1,17 @@
+-Protocol Oriented Programming
+we know we can use extensions to add more functionality to any type in swift. including ones we haven't written ourselves.
+//Protocol Extension Example
+protocol TeamRecord {
+  var wins: Int { get }
+  var losses: Int { get }
+  func winningPercentage() -> Double
+}
+
+extension TeamRecord {
+  var gamesPlayed: Int {
+    return wins + losses
+  }
+}
+
+// in this case the compiler knows any type that conforms to TeamRecord will have all the members of TeamRecord
+// also in TeamRecord protocol we have declarations only but in extension we have the implementation of the member
