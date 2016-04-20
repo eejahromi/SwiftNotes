@@ -15,3 +15,29 @@ extension TeamRecord {
 
 // in this case the compiler knows any type that conforms to TeamRecord will have all the members of TeamRecord
 // also in TeamRecord protocol we have declarations only but in extension we have the implementation of the member
+
+extension TeamRecord {
+  func winningPercentage() -> Double {
+    return Double(wins) / (Double(wins) + Double(losses)) // default implementation
+  }
+}
+
+// winningPercentage not implemented in BasketBallRecord struct so it will use default implementation from extension
+struct BasketballRecord: TeamRecord {
+  var wins: Int
+  var losses: Int
+  let seasonLength = 82
+}
+
+// winningPercentage has a new implementation in SoccerRecord struct so it will take the new/custom implementation
+struct SoccerRecord: TeamRecord {
+  var wins: Int
+  var losses: Int
+  var ties: Int
+  let seasonLength = 38
+  
+  func winningPercentage() -> Double {
+    return Double(wins) / (Double(wins) + Double(losses) + Double(ties))
+  }
+}
+
