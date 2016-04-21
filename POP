@@ -59,5 +59,27 @@ let team2: BaseballRecord = BaseballRecord(wins: 10, losses: 5) // defined as Ba
 team2.gamesPlayed // 162
 
 
+-Type Constraint
+protocol Tiable: {
+  var ties: Int { get }
+}
+
+extension TeamRecord where self: Tiable {
+  func winningPercentage() -> Double {
+    return Double(wins) / (Double(wins) + Double(losses) + Double(ties))
+  }
+}
+// creating default implementation for specific type combinations
+struct HockeyRecord: TeamRecord, Tiable {
+  var wins: Int
+  var losses: Int
+  var ties: Int
+}
+
+let hockeyTeam: TeamRecord = HockeyRecord(wins: 8,losses: 7,ties: 1) 
+hockeyTeam.winningPercentage() // .500
+
+
+
 
 
