@@ -41,3 +41,23 @@ struct SoccerRecord: TeamRecord {
   }
 }
 
+-protocol extension dispatching
+struct BaseballRecord: TeamRecord {
+  var wins: Int
+  var losses: Int
+  let gamesPlayed: Int = 162
+  
+  func winningPercentage() -> Double {
+    return // implementation
+  }
+}
+
+let team1: TeamRecord = BaseballRecord(wins: 10, losses: 5) // defined as TeamRecord
+team1.gamesPlayed // 15
+
+let team2: BaseballRecord = BaseballRecord(wins: 10, losses: 5) // defined as BaseballRecord
+team2.gamesPlayed // 162
+
+
+
+
