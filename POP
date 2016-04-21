@@ -1,4 +1,10 @@
 -Protocol Oriented Programming
+
+advantages vs subclassing:
+-classes and subclassing only work with classes and we have to focus on implementation and deeper class hierarchies
+-with protocols we only focus on contracts and interfaces and then we can couple and adapt classes, structs or enums using 
+  those protocols or interfaces.
+
 we know we can use extensions to add more functionality to any type in swift. including ones we haven't written ourselves.
 //Protocol Extension Example
 protocol TeamRecord {
