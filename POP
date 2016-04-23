@@ -85,6 +85,9 @@ struct HockeyRecord: TeamRecord, Tiable {
 let hockeyTeam: TeamRecord = HockeyRecord(wins: 8,losses: 7,ties: 1) 
 hockeyTeam.winningPercentage() // .500
 
+Mixin: A protocol such as Equatable that defines additional characteristics but doesn't include any code or implementation.
+Trait: A protocol that add "free" behavior to a type simply making your class or struct conform to the protocol.
+
 
 
 
