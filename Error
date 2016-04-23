@@ -1,6 +1,20 @@
 -ErrorType protocol
+// ErrorType go well with enums
+// let's do monopoly error handling
 
 enum RollingError: ErrorType {
   case Doubles
   case OutOfFunding
 }
+
+// example
+func roll(firstDoce: Int,secondDice: Int) throws {
+  let error: RollingError
+  // doubles error happened
+  error = .Doubles
+  throw error
+  
+  // outOfFunding happened
+  error = .OutOfFunding
+  throw error
+} 
