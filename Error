@@ -22,3 +22,23 @@ func roll(firstDoce: Int,secondDice: Int) throws {
   error = .OutOfFunding
   throw error
 } 
+
+// in the move func we are going to catch the errors
+func move(firstDice: Int,secondDice: Int) -> String {
+  do {
+    try roll(first,secondDice: second)
+    return "successful"
+    } catch RollingError.Doubles {
+      return "Doubles"
+    } catch RollingError.OutOfFunding {
+      return "Out of funding"
+    } catch {
+      return "unknown error"
+    }
+}
+
+
+
+
+
+
