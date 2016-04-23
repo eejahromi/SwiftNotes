@@ -1,7 +1,11 @@
 -ErrorType protocol
 // ErrorType go well with enums
-// let's do monopoly error handling
 
+-There are two ways to handle errors
+ONE: handle them immediately
+TWO: bubble them up to another level and handle later
+
+// let's do monopoly error handling
 enum RollingError: ErrorType {
   case Doubles
   case OutOfFunding
