@@ -1,0 +1,6 @@
+-ErrorType protocol
+
+enum RollingError: ErrorType {
+  case Doubles
+  case OutOfFunding
+}
