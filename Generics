@@ -46,5 +46,9 @@ if someLastName == nil {
 
 // the above two pieces of code are exactly the same thing
 
-
+-Swap implementation using generics
+func swapped<T,U>(x: T, _ y: U) -> (U,T) {
+  return (y,x)
+}
+swapped("john",43) // returns (43,"john")
 
