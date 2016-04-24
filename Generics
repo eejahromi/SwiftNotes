@@ -1,1 +1,6 @@
 - Generics in Swift Standard Library
+
+var newStrings: Array<String>
+let age: Optional<Int>
+
+
