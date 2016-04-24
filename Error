@@ -24,6 +24,8 @@ func roll(firstDoce: Int,secondDice: Int) throws {
 } 
 
 // in the move func we are going to catch the errors
+// when calling an error throwing function, we must embed it in a do block, within that block we try the function and if it fails,
+  then we will catch it.
 func move(firstDice: Int,secondDice: Int) -> String {
   do {
     try roll(first,secondDice: second)
