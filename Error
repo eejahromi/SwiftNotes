@@ -37,7 +37,13 @@ func move(firstDice: Int,secondDice: Int) -> String {
     }
 }
 
+-If we have a struct that might fail when getting initialized, we should use a failable initializer so that we can handle
+the failed initialization gracefully.
 
+init?(name:String, address: String) {
+  self.name = name
+  guard(address.Characters.count > 0) else { return nil }
+}
 
 
 
