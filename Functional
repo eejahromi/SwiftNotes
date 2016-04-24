@@ -1,0 +1,3 @@
+
+Higher-order-function: Any function that takes in another function as a parameter.
+The big three: Map, Reduce, Filter
