@@ -1,3 +1,9 @@
 
 Higher-order-function: Any function that takes in another function as a parameter.
 The big three: Map, Reduce, Filter
+
+-Map
+//In swift map is not defined as a function but as a method...
+let upperCaseAnimals = animals.map(capitalize)
+
+// also it isn't defined on Array<T> but defined in the sequenceType protocol
