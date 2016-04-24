@@ -3,4 +3,16 @@
 var newStrings: Array<String>
 let age: Optional<Int>
 
+struct Cat {
+  var name: String
+}
+struct Dog {
+  var name: String
+}
+struct Keeper<T> {
+  var name: String
+  var morningAnimal: T
+  var afternoonAnimal: T
+}
+let john = Keeper(name: "John",morningAnimal: Cat(name: "Buddy"),afternoonAnimal: Cat(name:"Champ")) // type is john<Cat> 
 
