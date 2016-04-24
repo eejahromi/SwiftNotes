@@ -16,3 +16,35 @@ struct Keeper<T> {
 }
 let john = Keeper(name: "John",morningAnimal: Cat(name: "Buddy"),afternoonAnimal: Cat(name:"Champ")) // type is john<Cat> 
 
+-swift's Optional idea with generics, example
+enum OptionalString {
+  case None
+  case Some(String)
+}
+struct Person {
+  var lastNmae: OptionalString
+  // some other OptionalType using enums
+}
+
+// at some point we want to use generics instead of keep creating optional specific types using enums
+// and so we have the implementation of swift Optional
+enum Optional<T> {
+  case None
+  case Some(T)
+}
+
+// checking
+var someLastName: OptionalString<String>.None
+if let someLastName == OptionalString<String>.None {
+  // no lastName
+}
+
+var someLastName: String? = nil
+if someLastName == nil {
+  // no lastName
+}
+
+// the above two pieces of code are exactly the same thing
+
+
+
