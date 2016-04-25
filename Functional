@@ -7,3 +7,11 @@ The big three: Map, Reduce, Filter
 let upperCaseAnimals = animals.map(capitalize)
 
 // also it isn't defined on Array<T> but defined in the sequenceType protocol
+
+-In functional programming, the idea is to avoid external state and to have functions give you the same result for the same input.
+
+Best practices:
+-prefer immutable values (constants instead of variables).
+-use pure functions (function that does not modify the input).
+-treat functions as values (pass functions as parameters).
+
