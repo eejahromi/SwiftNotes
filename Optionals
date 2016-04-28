@@ -1,2 +1,12 @@
 -Optionals
 // for situations where a value might be or not be present
+
+// example
+let simpleString = "0506"
+let anotherString = "Hello World"
+
+let number = Int(simpleString) // number is 0506
+let anotherNumber = Int(anotherString) // anotherNumber will be nil because 'Hello World' cannot be converted to int
+
+// Int() initializer might have the correct or incorrect value to be inserted into number variables
+// so the initializer has been defined to return an optional value ? in case the value is nil
