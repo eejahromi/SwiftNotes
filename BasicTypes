@@ -17,6 +17,9 @@ let grid = (x:2,y:3)
 let gridX = grid.x
 let gridY = grid.y
 
+// http404Error is of type (Int, String)
+let http404Error = (404, "Not Found")
+
 // another way to create a tuple
 let tuple: (day:Int,month:Int,year:Int) = (15,8,2015)
 
