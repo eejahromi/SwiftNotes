@@ -1,4 +1,14 @@
-/* Tuples */
+-Int
+let minValue = UInt8.min // Unsigned-integer 8 bound minimum
+let maxValue = UInt8.max // Unsigned-integer 8 bound max
+
+-Type Inferring
+let pi = 3.14159 // always inferred to Double as opposed to Float
+let morePie = 2 + 3.14159 // again inferred to Double
+
+let hexadecimalInteger = 0x11     // 17 in hexadecimal literal notation
+
+-Tuples 
 let coordinates : (Int,Int) = (1,0)
 let x : Int = coordinates.0
 let y : Int = coordinates.1
