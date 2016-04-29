@@ -19,6 +19,10 @@ let gridY = grid.y
 
 // http404Error is of type (Int, String)
 let http404Error = (404, "Not Found")
+OR
+// breaking up into different messages
+let (statusCode, statusMessage) = http404Error
+print("The status code is \(statusCode)")
 
 // another way to create a tuple
 let tuple: (day:Int,month:Int,year:Int) = (15,8,2015)
