@@ -10,3 +10,12 @@ let anotherNumber = Int(anotherString) // anotherNumber will be nil because 'Hel
 
 // Int() initializer might have the correct or incorrect value to be inserted into number variables
 // so the initializer has been defined to return an optional value ? in case the value is nil
+
+// if we want to have a variable or a constant that might be nil, we have to define it as optional
+
+// if var/constant is defined without a default value, it automatically gets set to nil
+let convertedNumber: Int? 
+NOTE: In Swift nil is not the same nil as Objc. In Objc nil is a pointer to a non-existant object, in Swift it is the absence of a value of certain type.
+
+
+
