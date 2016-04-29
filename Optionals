@@ -17,5 +17,20 @@ let anotherNumber = Int(anotherString) // anotherNumber will be nil because 'Hel
 let convertedNumber: Int? 
 NOTE: In Swift nil is not the same nil as Objc. In Objc nil is a pointer to a non-existant object, in Swift it is the absence of a value of certain type.
 
+-Force unwrapping:
+// because force unwrapping could cause a runtime error, it should be used with care
+if convertedNumber != nil {
+  print("converted number: \(convertedNumber!)")
+}
+
+-Optional binding
+if let newNumber = Int(somePotentialNumber) {
+  print("\(somePotentialNumber)")
+}
+
+// Multiple optional bindings in a single statement
+if let firstNumber = Int("45"), secondNumber = Int("22") where firstNumber < secondNumber {
+  print("\(firstNumber) < \(secondNumber)")
+}
 
 
