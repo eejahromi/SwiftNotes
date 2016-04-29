@@ -33,4 +33,18 @@ if let firstNumber = Int("45"), secondNumber = Int("22") where firstNumber < sec
   print("\(firstNumber) < \(secondNumber)")
 }
 
+-Implicitly unwrapped optionals
+// with implicitly unwrapped optionals we define the optional with an ! instead of the normal ?
+// this marks it that the optional will always have a value in the program
+
+// normal optional
+let possibleNumber: String?
+let forcedString: String = possibleNumber!
+
+// implicitly unwrapped optional
+let possibleNumber: String!
+let forcedString: String = possibleNumber // no need for exclamation point
+
+NOTE: we can still use if-let for checking the value with implicitly unwrapped optionals
+* Implicitly unwrapped optionals shouldn't be used with variables where they can become nil later on because of runtime error
 
