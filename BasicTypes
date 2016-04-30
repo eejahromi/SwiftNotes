@@ -35,6 +35,13 @@ var (_,day,_,averageTemerature) = temp
 let myName = "Ehsan"
 let secondWay = "Ehs\u{61}n" // "Ehsan" - using unicode character!
 
+NOTE: unlike java the two following strings are equal
+let stringExample = ""
+let anotherStringExample = String()
+
+// strings are value types which means when you pass a string to a function a copy of the original string is sent to the
+//    function. That's because strings are structs behind the scenes
+
 //quick handy methods
 myName.characters.count
 myName.uppercaseString
