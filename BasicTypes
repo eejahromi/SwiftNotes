@@ -45,4 +45,5 @@ let anotherStringExample = String()
 //quick handy methods
 myName.characters.count
 myName.uppercaseString
-
+myName[myName.endIndex.predecessor()]
+myName[myName.startIndex]
