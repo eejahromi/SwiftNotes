@@ -71,7 +71,18 @@ firstLoop: for i in 0...10 {
     }
 }
 
+-Subscript
+Classes, structs and enums can define subscript in order to provide easy access to members using brackets []
 
+subscript(index: Int) -> Int {
+    get {
+        // return an appropriate subscript value here
+    }
+    set(newValue) {
+        // perform a suitable setting action here
+    }
+    // or return
+}
 
 
 
