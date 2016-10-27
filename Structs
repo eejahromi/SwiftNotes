@@ -13,6 +13,8 @@ let storeLocation = Location(latitude: 22.9876, longitude: -52.2345)
 storeLocation.latitude
 storeLocation.longitude
 
+Every strict will have an initializer by default in swift but if we add an initializer we won't get the default one anymore
+
 // struct with custom initializer
 struct SecondLocation {
     let latitude: Double
