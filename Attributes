@@ -1,0 +1,13 @@
+// mark functionsv availability for different iOS versions
+
+@available(iOS 9.0,*)
+@available(iOS,deprecated: 9.0,message: "Use otherFunction()")
+
+// checking for iOS version in implementation
+if #available(iOS 9.0, *) {
+  print("iOS 9 and greater")
+  // here using iOS 9.0 and above function
+} else {
+  print("iOS 8.4")
+  // here using otherFunction
+}
