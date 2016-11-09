@@ -27,3 +27,29 @@ for i in 30..<40 {
 
 // Explanation: Since "queue" is asynchronous, the above code will be executed in parallel
 // the code that's executing on the main queue has higher priority so most likely it will finish before the asynchronous queue
+
+-Quality of Service and Priorities
+types of queue priorities: (from highest to lowest, default if priority not specified)
+-userInteractive
+-userInitiated
+-default
+-utility
+-background
+-unspecified
+
+let queue1 = DispatchQueue(label:"com.eejahromi.queue1",qos:.userInteractive)
+let queue2 = DispatchQueue(label:"com.eejahromi.queue1",qos:.userInteractive)
+queue1.async {
+  for i in 10 {
+    print("queue1",i)
+  }
+}
+
+queue2.async {
+  for i in 20..<30 {
+    print("queue2",i)
+  }
+}
+
+// Exaplanation: queues have the same qos, queues will execute alternatively
+// when different, whichever has the highest priority will finish first
