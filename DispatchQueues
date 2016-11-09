@@ -3,6 +3,9 @@ Dispatch Queues in Swift 3.0
 // new syntax for creating dispatch queues
 let queue = DispatchQueue(label:"com.eejahromi.queue")
 
+// or globalQueue
+let globalQueue = DispatchQueue.global()
+
 -synchronous queue
 queue.sync{
   for i in 20 {
@@ -39,6 +42,8 @@ types of queue priorities: (from highest to lowest, default if priority not spec
 
 let queue1 = DispatchQueue(label:"com.eejahromi.queue1",qos:.userInteractive)
 let queue2 = DispatchQueue(label:"com.eejahromi.queue1",qos:.userInteractive)
+let globalQueue = DispatchQueue.global(qos:.userInteractive)
+
 queue1.async {
   for i in 10 {
     print("queue1",i)
