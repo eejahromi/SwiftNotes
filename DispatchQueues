@@ -84,5 +84,14 @@ Explanation: when the above code executes, tasks will be distributed to be done 
 around the same time
 
 
+-DelayQueues
+let delayQueue = DispatchQueue(label: "com.eejahromi.delayqueue",qos:.userInitiated)
+print(Date())
+let additionalTime: DispatchTimeInterval = .seconds(2)
+        
+delayQueue.asyncAfter(deadline: .now() + additionalTime, execute: {
+  print(Date())
+})
+
 
 
