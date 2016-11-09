@@ -53,3 +53,36 @@ queue2.async {
 
 // Exaplanation: queues have the same qos, queues will execute alternatively
 // when different, whichever has the highest priority will finish first
+
+-Concurrent queues
+// example of how to create a concurrent queue
+let concurrentQueue = DispatchQueue(label:"com.eejahromi.queue1",qos: .userInteractive,attributes: .concurrent)
+
+Explanation: concurrent queue is specified by adding "attributes:.concurrent"
+if concurrent is not specified the queue is then serial. 
+SERIAL queue means that if the queue is assigned more than one one task, it will execute ONE TASK AT A TIME
+
+concurrentQueue.async {
+  for i in 10 {
+    print("concurrent",i)
+  }
+}
+
+concurrentQueue.async {
+  for i in 20..<30 {
+    print("concurrent",i)
+  }
+}
+
+concurrentQueue.async {
+  for i in 30..<40 {
+    print("concurrent",i)
+  }
+}
+
+Explanation: when the above code executes, tasks will be distributed to be done so all loops will roughly start and finish
+around the same time
+
+
+
+
