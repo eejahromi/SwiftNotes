@@ -1,1 +1,15 @@
 Dispatch Queues in Swift 3.0
+
+// new syntax for creating dispatch queues
+let queue = DispatchQueue(label:"com.eejahromi.queue")
+
+-synchronous queue
+queue.sync{
+  for i in 20 {
+    print(i)
+  }
+}
+// this code will not execute until the code above (synchronous queue) is finished
+print("this comes after the synchronous queue")
+
+
