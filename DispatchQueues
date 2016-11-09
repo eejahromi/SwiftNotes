@@ -10,6 +10,20 @@ queue.sync{
   }
 }
 // this code will not execute until the code above (synchronous queue) is finished
+// NOTE: this print statement will be executed on the main queue
 print("this comes after the synchronous queue")
 
 
+-asynchronous queue
+queue.async{
+  for i in 20 {
+    print(i)
+  }
+}
+
+for i in 30..<40 {
+  print(i)
+}
+
+// Explanation: Since "queue" is asynchronous, the above code will be executed in parallel
+// the code that's executing on the main queue has higher priority so most likely it will finish before the asynchronous queue
