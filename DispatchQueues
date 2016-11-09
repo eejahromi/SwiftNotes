@@ -100,3 +100,18 @@ delayQueue.asyncAfter(deadline: .now() + additionalTime, execute: {
 
 
 
+
+
+-Simple example using URLSession
+let imageURL: URL = URL(string:"https://imageurl.com/1234")!
+URLSession(configuration: .default).dataTask(with:imageURL,completionHandler:{ (imageData,response,error) in 
+  if let data = imageData {
+    print("data downloaded")
+    DispatchQueue.main.async {
+      self.imageView.image = UIImage(data: data)
+    }
+  }
+}).resume()
+
+
+
