@@ -39,7 +39,12 @@ let someOtherJohn = Person(firstName: "John", lastName: "Smith")
 someOtherJohn === john // false
 
 // access controls
-// public, private, internal: entities are visible to code inside the module defined in but not to code in a module that imports the module it is defined in
+-private
+-fileprivate
+-internal (default): entities are visible to code inside the module defined in but not to code in a module that imports the module it is defined in
+-public
+-open
+
 
 internal class InternalClass{
     private func sayHi(){
