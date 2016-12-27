@@ -8,6 +8,13 @@ default:
 }
 // "x = y = z"
 
+checking for type (similar to Objc isKindClass:)
+-using keyword "is"
+if someViewController is UITabbarController {
+print("YES")
+}
+
+
 let hourOfDay = 12
 let timeOfDay: String
 switch(hourOfDay){
