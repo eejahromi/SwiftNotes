@@ -1,5 +1,10 @@
 -table view add screen example
 
+-classic "Has-a" relationship
+-protocols can also be used as types
+if we have different types of objects that are loosly related we can have them conform to the same protocol and store them 
+inside of a single array
+
 protocol ItemDetailViewControllerDelegate: class{
     func itemDetailViewControllerDidCancel(controller: ItemDetailViewController)
     func itemDetailViewController(controller: ItemDetailViewController, didFinishAddingItem item: ChecklistItem)
