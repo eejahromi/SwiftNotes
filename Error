@@ -48,6 +48,7 @@ init?(name:String, address: String) {
   guard(address.Characters.count > 0) else { return nil }
 }
 
-
-
+-defer
+defer will keep the code inside that block and execute it as we're leaving the function
+if there are more than one defers then they will execute in reverse order
 
