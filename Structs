@@ -49,6 +49,8 @@ location.isNorthernHemisphere()
 
 // Extension
 // or types we don't own - like categories in Objc
+NOTE: extensions cannot have stored properties but they can have computed properties
+NOTE2: It's good practice to expose public (properties and method) APIs via an extensions
 extension String {
     func evenOrOdd() -> String {
         return characters.count % 2 == 0 ? "Even!" : "Odd!"
