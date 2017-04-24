@@ -1,1 +1,6 @@
 
+- Using live playgrounds
+1) import PlaygroundSupport
+2) create UIView or whatever
+3) PlaygroundPage.current.liveView = gradientView
+
