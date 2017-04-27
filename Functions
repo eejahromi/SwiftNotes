@@ -60,3 +60,8 @@ func fibonacci(number: Int) -> Int {
 
 fibonacci(7)
 
+--selectors
+adding #selectors (i.e UIButton) in Swift 3.0 +
+button.addTarget(self, action:#selector(DetailViewController.buttonTapped(sender:)),for:.touchUpInside)
+
+
