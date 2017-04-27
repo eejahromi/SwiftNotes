@@ -2,7 +2,8 @@
 - Using live playgrounds
 1) import PlaygroundSupport
 2) create UIView or whatever
-3) PlaygroundPage.current.liveView = gradientView
+3) PlaygroundPage.current.liveView = gradientView OR...
+4) PlaygroundSupport.PlaygroundPage.current.needsInfiniteExecution = true // on top of file right after import
 
 - Making stuff PlaygroundViewable
 extension UIColor: PlaygroundViewable {
