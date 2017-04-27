@@ -4,3 +4,13 @@
 2) create UIView or whatever
 3) PlaygroundPage.current.liveView = gradientView
 
+- Making stuff PlaygroundViewable
+extension UIColor: PlaygroundViewable {
+  public var PlaygroundLiveViewRepresentation: PlaygroundLiveViewRepresentation {
+    let colorView = UIView(frame:CGRect(x:0,y:0,width:50,height:50))
+    colorView.backgroundColor = self
+    return .view(colorView)
+  }
+}
+
+PlaygroundPage.current.liveView = UIColor.purple
