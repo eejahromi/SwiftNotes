@@ -64,4 +64,5 @@ fibonacci(7)
 adding #selectors (i.e UIButton) in Swift 3.0 +
 button.addTarget(self, action:#selector(DetailViewController.buttonTapped(sender:)),for:.touchUpInside)
 
-
+--keypath
+let kvcButton = self.value(forKeyPath: #keyPath(DetailViewController.button)) // Optional(<UIButton:0x...>
