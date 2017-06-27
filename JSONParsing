@@ -15,4 +15,27 @@
  },...
 ]
 
+// we can use failable initializers in order to comply with type safety, especially when iterating over arrays
+struct Person{
+  var name: String
+  var age: UInt
+  var city: String
+  var occupation: String
+  
+  init?(entry: Dictionary) {
+    name = entry["name"] as! String
+    age = entry["age"] as! UInt
+    city = entry["city"] as! String
+    occupation = entry["occupation"] as! String
+  }
+}
+
+// assume "jsonArray" has been constructed of our JSON file
+
+array.forEach{ (entry) in Void
+  guard let person = Person(entry:entry) as! Person else {
+    print("failed to initialize")
+  }
+}
+
 
