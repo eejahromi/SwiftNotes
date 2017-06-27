@@ -1,1 +1,18 @@
 
+-JSON parsing in is a little tricky because of optionals
+
+// Sample JSON
+[{
+  "name":"John Smith",
+  "age": 30,
+  "city":"New York",
+  "occupation":"Software Engineer"
+ },{
+  "name":"Jane Smith",
+  "age": 28,
+  "city":"New Jersey",
+  "occupation":nil
+ },...
+]
+
+
