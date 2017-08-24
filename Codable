@@ -9,6 +9,13 @@ strcut MySettings: Codable {
   var someFlag: Bool
   var someString: String
   var someInt: Int
+  
+  // if we don't want to use the same keyNames in our struct, we use CodingKeys enum
+  private enum CodingKeys: String, CodingKey {
+    case someFlag
+    case someString
+    case id = "someInt"
+  }
 }
 
 // read/decode example
