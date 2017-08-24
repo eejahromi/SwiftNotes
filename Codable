@@ -1,1 +1,14 @@
 // New Codable Protocol in Swift 4
+
+NOTE: Codable is a typealias for Decodable & Encodable, if only reading or writing then we can use one of them
+
+- Using Codable with Property lists
+
+// model struct that matches property list elements
+strcut MySettings: Codable {
+  var someFlag: Bool
+  var someString: String
+  var someInt: Int
+}
+
+
