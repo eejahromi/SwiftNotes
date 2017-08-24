@@ -11,4 +11,12 @@ strcut MySettings: Codable {
   var someInt: Int
 }
 
+// read/decode example
+let settingsUrl: URL = ...
+var mySettings: MySettings?
+
+if let data = try? Data(contentsOf: settingsURL) {
+  let decoder = PropertyListDecoder()
+  settings = try? decoder.decode(MySettings.self, from: data)
+}
 
