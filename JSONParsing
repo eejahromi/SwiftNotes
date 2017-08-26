@@ -38,4 +38,20 @@ array.forEach{ (entry) in Void
   }
 }
 
+// swift 4 parsing
+
+struct Soda : Codable {
+      // ...
+      enum CodingKeys : String, CodingKey {
+          case name
+          case company = "company_name"
+          case flavor
+    }
+}
+
+
+let encoder = JSONEncoder()
+let data = try! encoder.encode(beer)
+print(String(data: data, encoding: .utf8)!)
+
 
