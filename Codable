@@ -27,3 +27,13 @@ if let data = try? Data(contentsOf: settingsURL) {
   settings = try? decoder.decode(MySettings.self, from: data)
 }
 
+// write/encode example
+let settingsExample = MySettings(someFlag: true, someString: "example", someInt:28)
+let encoder = PropertyListEncoder()
+encoder.outputFormat = .xml
+do{
+  let data = try encoder.encode(settingsExample)
+  try data.write(to: dataURL)
+} catch {
+  print(error)
+}
