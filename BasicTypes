@@ -47,3 +47,15 @@ myName.characters.count
 myName.uppercaseString
 myName[myName.endIndex.predecessor()]
 myName[myName.startIndex]
+
+// converting optional to string for Swift 3.1+
+print("Value is ",String(describing: optionalValue))
+// "Value is Optional(42)"
+
+print("Value is \(optionalValue ?? 0)")
+// "Value is 42"
+
+print("Value is \(optionalValue as Int?)")
+// "Value is Optional(42)"
+
+
