@@ -1,0 +1,5 @@
+{
+	production = NO;
+	serverURL = "www.ehsanjahromi.com";
+	timeout = 60;
+}
